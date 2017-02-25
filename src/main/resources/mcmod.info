@@ -1,0 +1,21 @@
+[
+{
+  "modid": "JacksFixes",
+  "name": "Jack's Fixes",
+  "description": "Small fixes to minecraft!",
+  "version": "1.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "JackDeg"
+  ],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]

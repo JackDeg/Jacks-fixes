@@ -1,6 +1,7 @@
 package com.JackDeg.JacksFixes;
 
 import com.JackDeg.JacksFixes.Reference.Reference;
+import com.JackDeg.JacksFixes.configuration.ConfigurationHandler;
 import com.JackDeg.JacksFixes.proxy.Iproxy;
 import com.JackDeg.JacksFixes.util.LogHelper;
 import cpw.mods.fml.common.Mod;
@@ -16,12 +17,14 @@ public class JacksFixes
     @Mod.Instance(Reference.MOD_ID)
     public static JacksFixes instance;
 
-    @SidedProxy(clientSide = "com.JackDeg.JacksFixes.proxy.ClientProxy", serverSide = "com.JackDeg.JacksFixes.proxy.ServerProxy")
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static Iproxy proxy;
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        LogHelper.info("Helloo!!");
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+        LogHelper.info("Ha! My Pre Init completed successfully!");
     }
 
     @Mod.EventHandler

@@ -1,7 +1,8 @@
 package com.JackDeg.JacksFixes;
 
+import com.JackDeg.JacksFixes.Reference.Config;
 import com.JackDeg.JacksFixes.Reference.Reference;
-import com.JackDeg.JacksFixes.configuration.ConfigurationHandler;
+import com.JackDeg.JacksFixes.handler.ConfigurationHandler;
 import com.JackDeg.JacksFixes.proxy.Iproxy;
 import com.JackDeg.JacksFixes.util.LogHelper;
 import cpw.mods.fml.common.Mod;
@@ -30,12 +31,12 @@ public class JacksFixes
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-        System.out.println("Init");
+
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-        System.out.println("PostInit");
+        LogHelper.info("Looks like skinning is set to " + Config.skinningEnabled);
     }
 }

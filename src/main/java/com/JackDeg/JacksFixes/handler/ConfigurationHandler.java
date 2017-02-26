@@ -16,6 +16,7 @@ public class ConfigurationHandler
         if (configuration == null)
         {
             configuration = new Configuration(configFile);
+            loadConfiguration();
         }
 
 
@@ -30,7 +31,7 @@ public class ConfigurationHandler
         }
     }
 
-    public void loadConfiguration()
+    private static void loadConfiguration()
     {
        boolean skinning = configuration.get(Configuration.CATEGORY_GENERAL, "skinning", false, "Used to determine weather the skinning mechanic is used.").getBoolean(false);
 

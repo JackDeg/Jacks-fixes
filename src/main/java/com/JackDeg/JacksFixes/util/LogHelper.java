@@ -12,4 +12,5 @@ public class LogHelper
     }
 
     public static void info(Object object) { log(Level.INFO, String.valueOf(object)); }
+    public static void warn(Object object) { log(Level.WARN, String.valueOf(object)); }
 }

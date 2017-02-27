@@ -6,7 +6,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModItems
     {
-        private static final ItemJF Knife = new ItemKnife();
+        public static final ItemJF Knife = new ItemKnife();
 
         public static void init()
         {
